@@ -1,6 +1,6 @@
 # Node.js Learning Practice
 
-Welcome! This project is dedicated to learning and practicing **Node.js**.
+Welcome! This Repository is dedicated to learning and practicing **Node.js**.
 
 ## Overview
 
