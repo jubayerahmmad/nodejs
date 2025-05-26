@@ -14,3 +14,9 @@ fs.readFile("text.txt", (err, data) => {
   console.log(data.toString());
 });
 // console.log(data.toString());
+
+const url = require("url");
+const myURL = url.parse(
+  "https://nodejs.org/api/url.html#url-strings-and-url-objects"
+);
+console.log(myURL);
