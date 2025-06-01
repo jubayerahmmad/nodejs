@@ -55,7 +55,15 @@ handler.handleReqRes = (req, res) => {
 
   req.on("end", () => {
     realData += decoder.end();
-    console.log(realData);
+    chosenHandler(requestProperties, (statusCode, payload) => {
+      statusCode = typeof statusCode === "number" ? statusCode : 500;
+      payload = typeof payload === "object" ? payload : {};
+      const payloadStr = JSON.stringify(payload);
+
+      // return the final Response
+      res.writeHead(statusCode);
+      res.end(payloadStr);
+    });
 
     res.end("Hello Programmmers");
   });
