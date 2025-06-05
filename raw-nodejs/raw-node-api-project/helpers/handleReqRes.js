@@ -61,11 +61,10 @@ handler.handleReqRes = (req, res) => {
       const payloadStr = JSON.stringify(payload);
 
       // return the final Response
+      res.setHeader("Content-Type", "application/json");
       res.writeHead(statusCode);
       res.end(payloadStr);
     });
-
-    res.end("Hello Programmmers");
   });
 };
 
