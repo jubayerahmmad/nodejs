@@ -7,8 +7,10 @@
 
 const crypto = require("crypto");
 const env = require("../helpers/environments");
+
 // Scaffolding
 const utilities = {};
+
 // parse JSON string to object
 utilities.parseJSON = (jsonString) => {
   let output;
@@ -31,6 +33,26 @@ utilities.hash = (str) => {
     return hash;
   } else {
     return false;
+  }
+};
+
+// create random string
+utilities.createRandomString = (strLength) => {
+  let length = strLength;
+  length = typeof strLength === "number" && strLength > 0 ? strLength : false;
+
+  if (length) {
+    const possibleCharacters = "abcdefghijklmnopqrstuvqxyz1234567890";
+    let str = "";
+    for (let i = 1; i <= length; i += 1) {
+      const randomCharacter = possibleCharacters.charAt(
+        Math.floor(Math.random() * possibleCharacters.length)
+      );
+      str += randomCharacter;
+    }
+    return str;
+  } else {
+    return null;
   }
 };
 
