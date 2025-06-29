@@ -43,8 +43,8 @@ notifications.sendTwilioSms = (phone, msg, callback) => {
     const requestDetails = {
       hostname: "api.twilio.com",
       method: "POST",
-      path: `2010-04-01/Accounts/${twilio.accoundSid}/Messages.json`,
-      auth: `${twilio.accoundSid}:${twilio.authToken}`,
+      path: `/2010-04-01/Accounts/${twilio.accountSid}/Messages.json`,
+      auth: `${twilio.accountSid}:${twilio.authToken}`,
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },

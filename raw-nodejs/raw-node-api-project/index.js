@@ -13,6 +13,7 @@ const app = {};
 app.init = () => {
   // start server
   server.init();
+
   // start worker
   worker.init();
 };
