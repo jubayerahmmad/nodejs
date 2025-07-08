@@ -1,0 +1,6 @@
+GET http://localhost:3000/search?q=javascript&category=programming&page=2
+
+###
+GET  http://localhost:3000/api/validate
+###
+GET http://localhost:3000/users/123/posts/456
